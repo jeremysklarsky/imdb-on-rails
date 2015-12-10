@@ -186,7 +186,15 @@
 
 SHOWS = [
   'Seinfeld',
-  'Breaking Bad'
+  'Breaking Bad',
+  'The Wire',
+  'The League',
+  'Game of Thrones',
+  'The West Wing',
+  'Friends',
+  'Six Feet Under',
+  'The Sopranos',
+  'Mad Men'
 ]
 
 SHOWS.each do |show|

@@ -45,10 +45,9 @@ class IMDB_Writers
   end
 
   def build_episode(episode)
-    @episode = Episode.find_or_create_by(:title => episode["Title"])
+    @episode = Episode.find_or_create_by(:imdbID => episode["imdbID"])
     @episode.title = episode['Title']
     @episode.rating = episode['imdbRating'].to_f
-    @episode.imdbID = episode['imdbID']
     @episode.season = @season
     
     url = @episode.imdbID
@@ -56,6 +55,7 @@ class IMDB_Writers
     ep_writers = response.body["Writer"].split(', ').
                  reject{|writer| writer.include?('created') ||
                                  writer.include?('created by') ||
+                                 writer.include?('Ice') ||
                                  writer.include?('editor') ||
                                  writer.include?('story') ||
                                  writer.include?('developed') ||
