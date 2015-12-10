@@ -24,7 +24,7 @@ module Statable
 
     def total_points
       if self.episodes.size > 0
-        self.episodes.collect {|ep| ep.rating}.inject(:+)
+        self.episodes.collect {|ep| ep.rating}.inject(:+).round(2)
       else
         0
       end
