@@ -4,6 +4,8 @@ class Show < ActiveRecord::Base
   has_many :writers,  -> { uniq }, :through => :episodes
   has_many :directors,  -> { uniq }, :through => :episodes
 
+  include Statable::InstanceMethods
+
   def self.find_by_slug(params)
     self.find(params)
   end

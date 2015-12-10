@@ -1,6 +1,10 @@
 json.name         @show.name
+json.average      @show.average
+json.total_points @show.total_points
+json.season_count @show.seasons.size
+json.episode_count @show.episodes.size
 json.seasons      @show.seasons.each do |season|
-  json.season     season.number
+  json.number     season.number
   json.average    season.average
   json.total_points season.total_points
   json.count      season.episodes.size
