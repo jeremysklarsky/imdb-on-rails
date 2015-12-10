@@ -7,7 +7,6 @@ module Statable
 
   module InstanceMethods
     def shows
-      binding.pry
       self.episodes.collect {|episode| episode.season.show}.uniq
     end
 
