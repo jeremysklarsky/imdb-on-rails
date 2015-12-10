@@ -9,8 +9,4 @@ class Episode < ActiveRecord::Base
     self.season.show
   end
 
-  # def points
-  #   169-self.ranking
-  # end 
-
 end
