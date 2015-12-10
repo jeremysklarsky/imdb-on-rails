@@ -3,7 +3,7 @@ class Season < ActiveRecord::Base
   has_many :episodes
 
   def total_points
-    self.episodes.collect {|episode| episode.points}.inject(:+)
+    self.episodes.collect {|episode| episode.rating}.inject(:+)
   end
 
   def average 
