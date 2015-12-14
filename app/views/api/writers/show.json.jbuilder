@@ -10,6 +10,7 @@ end
 json.count        @writer.episode_count
 json.episodes     @writer.episodes.each do |episode|
   json.show       episode.show.name
+  json.showID     episode.show.id
   json.title      episode.title
   json.season     episode.season.number
   json.rating     episode.rating

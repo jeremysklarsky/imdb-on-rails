@@ -17,6 +17,7 @@ json.seasons      @show.seasons.each do |season|
   end
 end
 json.writers      @show.writers.each do |writer|
+  json.id         writer.id
   json.name       writer.name
   json.count      writer.show_episodes(@show).size
   json.total      writer.show_points(@show)
